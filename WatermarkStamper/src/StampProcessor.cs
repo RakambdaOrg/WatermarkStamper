@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -98,7 +99,7 @@ namespace WatermarkStamper
                         watermarkImage.SetResolution(inputImage.HorizontalResolution, inputImage.VerticalResolution);
                         graphics.DrawImageUnscaled(watermarkImage, x, y, watermarkImage.Width, watermarkImage.Height);
 
-                        watermarkedImage.Save(outputFile);
+                        watermarkedImage.Save(outputFile, ImageFormat.Jpeg);
                     }
                 }
                 catch (Exception ex)
@@ -110,7 +111,7 @@ namespace WatermarkStamper
                 _form.IncrementProgressbarValue();
             }
 
-            _form.SetProgressbarText($"Done with {skipped} skipped and {errored} errors");
+            _form.SetProgressbarText($"Processed {currentFile} files ({skipped} skipped | {errored} errors)");
             Logger.Info("Files processed");
         }
     }

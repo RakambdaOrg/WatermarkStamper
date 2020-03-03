@@ -338,28 +338,28 @@
             this.PerformLayout();
         }
 
-        #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label inputFolderLabel;
-        private System.Windows.Forms.Label watermarkImageLabel;
-        private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Button loadPresetButton;
         private System.Windows.Forms.Label outputFolderLabel;
-        private System.Windows.Forms.Label positionLabel;
         private System.Windows.Forms.Label paddingLabel;
         private System.Windows.Forms.NumericUpDown paddingUpDown;
         private System.Windows.Forms.ComboBox positionComboBox;
-        private System.Windows.Forms.TextBox selectedInputFolderText;
-        private System.Windows.Forms.TextBox selectedWatermarkText;
-        private System.Windows.Forms.TextBox selectedOutputFolderText;
+        private System.Windows.Forms.Label positionLabel;
         private WatermarkStamper.TextProgressBar progressBar;
-        private System.Windows.Forms.Label watermarkWidthLabel;
-        private System.Windows.Forms.NumericUpDown watermarkWidthUpDown;
+        private System.Windows.Forms.Button savePresetButton;
+        private System.Windows.Forms.TextBox selectedInputFolderText;
+        private System.Windows.Forms.TextBox selectedOutputFolderText;
+        private System.Windows.Forms.TextBox selectedWatermarkText;
+        private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label watermarkHeightLabel;
         private System.Windows.Forms.NumericUpDown watermarkHeightUpDown;
+        private System.Windows.Forms.Label watermarkImageLabel;
         private System.Windows.Forms.Label watermarkOpacityLabel;
         private System.Windows.Forms.NumericUpDown watermarkOpacityUpDown;
-        private System.Windows.Forms.Button loadPresetButton;
-        private System.Windows.Forms.Button savePresetButton;
+        private System.Windows.Forms.Label watermarkWidthLabel;
+        private System.Windows.Forms.NumericUpDown watermarkWidthUpDown;
+
+        #endregion
     }
 }

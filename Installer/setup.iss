@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "WatermarkStamper"
-#define MyAppVersion "1.0.1.1"
+#define MyAppVersion "1.0.1.2"
 #define MyAppPublisher "Thomas Couchoud"
 #define MyAppExeName "WatermarkStamper.exe"
 
@@ -18,7 +18,7 @@ AppPublisher={#MyAppPublisher}
 DefaultDirName={pf}\{#MyAppName}
 DisableProgramGroupPage=yes
 OutputDir=.
-OutputBaseFilename=WatermarkStamperSetup
+OutputBaseFilename=WatermarkStamperSetup-{#MyAppVersion}
 PrivilegesRequired=admin
 SetupIconFile=.\..\WatermarkStamper\icon.ico
 Compression=lzma

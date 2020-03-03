@@ -65,11 +65,11 @@ namespace WatermarkStamper
                     Logger.Error(ex, "Error duting stamping");
                     MessageBox.Show(ex.ToString());
                 }
-
-                startButton.Enabled = true;
-                selectedInputFolderText.Enabled = true;
-                selectedOutputFolderText.Enabled = true;
-                selectedWatermarkText.Enabled = true;
+                
+                SetStartButtonEnabled(true);
+                SetInputFolderEnabled(true);
+                SetOutputFolderEnabled(true);
+                SetWatermarkEnabled(true);
             }) {IsBackground = true};
             thread.Start();
         }
@@ -120,6 +120,7 @@ namespace WatermarkStamper
                     var json = File.ReadAllText(result);
                     var stamper = JsonConvert.DeserializeObject<Stamper>(json, new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore});
                     SetStamper(stamper);
+                    UpdateStartButton();
                     
                 }
                 catch (Exception ex)
@@ -241,6 +242,54 @@ namespace WatermarkStamper
             else
             {
                 progressBar.Text = value;
+            }
+        }
+        
+        public void SetStartButtonEnabled(bool value)
+        {
+            if (startButton.InvokeRequired)
+            {
+                Invoke(new MethodInvoker(delegate { startButton.Enabled = value; }));
+            }
+            else
+            {
+                startButton.Enabled = value;
+            }
+        }
+        
+        public void SetInputFolderEnabled(bool value)
+        {
+            if (selectedInputFolderText.InvokeRequired)
+            {
+                Invoke(new MethodInvoker(delegate { selectedInputFolderText.Enabled = value; }));
+            }
+            else
+            {
+                selectedInputFolderText.Enabled = value;
+            }
+        }
+        
+        public void SetOutputFolderEnabled(bool value)
+        {
+            if (selectedOutputFolderText.InvokeRequired)
+            {
+                Invoke(new MethodInvoker(delegate { selectedOutputFolderText.Enabled = value; }));
+            }
+            else
+            {
+                selectedOutputFolderText.Enabled = value;
+            }
+        }
+        
+        public void SetWatermarkEnabled(bool value)
+        {
+            if (selectedWatermarkText.InvokeRequired)
+            {
+                Invoke(new MethodInvoker(delegate { selectedWatermarkText.Enabled = value; }));
+            }
+            else
+            {
+                selectedWatermarkText.Enabled = value;
             }
         }
     }
