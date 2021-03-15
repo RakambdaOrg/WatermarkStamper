@@ -1,14 +1,6 @@
 ﻿version: 2
 updates:
-  - package-ecosystem: "dotnet:nuget"
+  - package-ecosystem: "nuget"
     directory: "/"
     schedule:
-      interval: "daily"
-    reviewers:
-      - RakSrinaNa
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    reviewers:
-      - RakSrinaNa
+      interval: daily
