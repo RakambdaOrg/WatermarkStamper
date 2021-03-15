@@ -1,7 +1,7 @@
 ﻿version: 2
 updates:
-  - package-ecosystem: "nuget"
-    directory: "/WatermarkStamper"
+  - package-ecosystem: "dotnet:nuget"
+    directory: "/"
     schedule:
       interval: "daily"
     reviewers:
