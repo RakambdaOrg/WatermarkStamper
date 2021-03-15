@@ -1,0 +1,14 @@
+﻿version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    reviewers:
+      - RakSrinaNa
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    reviewers:
+      - RakSrinaNa
